@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="TNote.AddNote"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TNote"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton x:Name="btnAddNote" Icon="Accept" Label="Save" Click="btnAddNote_Click"/>
+            <AppBarButton Icon="Clear" Label="Clear"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid>
+        <TextBox x:Name="txtTitle" HorizontalAlignment="Left" Margin="0,155,0,0" TextWrapping="Wrap" Text="{Binding Title, Mode=TwoWay}" VerticalAlignment="Top" Width="400"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="0,34,0,0" TextWrapping="Wrap" Text="ADD NOTE" VerticalAlignment="Top" Height="32" Width="400" FontSize="36" FontWeight="Bold"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="0,118,0,0" TextWrapping="Wrap" Text="Title" VerticalAlignment="Top" Height="32" Width="390" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="txtCategory" HorizontalAlignment="Left" Margin="0,263,0,0" TextWrapping="Wrap" Text="{Binding Category, Mode=TwoWay}" VerticalAlignment="Top" Width="400"/>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="0,231,0,0" TextWrapping="Wrap" Text="Category" VerticalAlignment="Top" Height="32" Width="390" FontSize="18" FontWeight="Bold"/>
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="0,330,0,0" TextWrapping="Wrap" Text="Note" VerticalAlignment="Top" Height="32" Width="400" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="txtNote" HorizontalAlignment="Left" Margin="0,362,0,0" TextWrapping="Wrap" Text="{Binding Content, Mode=TwoWay}" VerticalAlignment="Top" Width="400" Height="158"/>
+
+    </Grid>
+</Page>
