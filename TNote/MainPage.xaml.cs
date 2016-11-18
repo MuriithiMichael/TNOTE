@@ -24,8 +24,10 @@ namespace TNote
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        Note note;
         public MainPage()
         {
+            
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
@@ -61,7 +63,7 @@ namespace TNote
 
         private void btnViewMap_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(ViewMap));
+            //rame.Navigate(typeof(ViewMap), note);
         }
     }
 }
